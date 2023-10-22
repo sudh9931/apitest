@@ -4,3 +4,16 @@ https://openweathermap.org/api - go to this url and singin
 https://api.openweathermap.org/data/2.5/weather
 
 https://api.openweathermap.org/data/2.5/weather?q=bengaluru&units=metric&appid=b2f7276693524dc1283929277faa0eae
+
+apikey = 'b2f7276693524dc1283929277faa0eae' 
+url = "https://api.openweathermap.org/data/2.5/weather"
+
+params = {'q' :"delhi",
+          'appid' : apikey,
+          'units':'metric'}
+
+import requests
+
+data = requests.get(url, params=params)
+
+data.json()
